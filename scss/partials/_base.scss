@@ -1,0 +1,23 @@
+body, html {
+  font-family: $font-rubik;
+  background-color: white;
+  color : black;
+  font-size: 1em;
+  line-height: 1em;
+  
+}
+
+.container, .row{
+    max-width: 1140px; margin: 0 auto;
+    &:after{
+        clear:both;
+        display:table;
+        content:'';
+    }
+}
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border-sizing: border-box;
+}

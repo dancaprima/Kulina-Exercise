@@ -1,0 +1,74 @@
+.form-content{
+    @include grid-span(6,7);
+    
+}
+.form-box{
+  background : $primarybgColor;
+  margin: 30px 0 30px 100px;
+  padding: 10px 30px 10px 30px; 
+}
+
+.form-title{
+   line-height: 1.5rem;
+   text-align: center;
+   display: inline-block;
+   margin-bottom: 30px;
+   position: relative;
+   padding-left: 2rem;
+   padding-right: 2rem;
+
+      h2{
+        margin-bottom: 0px;
+      }
+      p{
+        color: $grey-text;
+        font-size: 1rem;
+      }
+         &:after{
+              margin: 0 auto;
+             border-bottom: 2px solid $primaryfgColor;
+             display: block;
+             width: 120px;
+             content:'';
+        }
+}
+.form-desc{
+  border-bottom:2px dotted $grey-line;
+  text-align: center;
+
+        p{
+          color: $grey-text;
+          font-size: 1 rem;
+        }
+        small{
+          font-weight: normal;
+          color: $grey-text;
+        }
+
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+    appearance: none;
+    border: 2px solid $grey-line;
+    color: black;    
+    font-size:1em;
+    margin:1.5em 0; 
+    padding:0.7em 2em 0.7em 1em;
+    width:100%;
+    border-radius: 3px;
+}
+
+label{
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.styled-select {
+  cursor:pointer;
+  margin-bottom:1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+}
+
