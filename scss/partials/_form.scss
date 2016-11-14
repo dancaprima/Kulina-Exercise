@@ -72,3 +72,24 @@ label{
   color: black;
 }
 
+input{
+ border: none;
+ height: 2rem;
+ padding-left: 10px;
+ margin-right: 10px !important;
+ 
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+
+  font-size: 0.85rem;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    font-size: 0.85rem;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    font-size: 0.85rem;
+}
+:-moz-placeholder { /* Firefox 18- */
+   font-size: 0.85rem;
+}
+

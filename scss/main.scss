@@ -3,8 +3,6 @@
 @import 'partials/**';
 
 
-
-
  #header{
    width: 100%;
    height: 100px;
@@ -31,21 +29,19 @@
   color : rgb(103, 103, 103);
      ul {
 			margin: 0 auto;
-      float: left;
-
+   
 			 li {
 					display : inline-block;
-          .active{
-            color: $primaryfgColor;
-          }					
+                    				
 				a {
           display:block;
 					color: inherit;
 					text-decoration: none;
 					line-height: 40px;
 					padding: 0 0.5em 0 0.5em;
-					
-          &:hover{
+          
+
+        &:hover{
           color: $primaryfgColor;
         }
 				}
@@ -61,19 +57,21 @@
 		top: 40px;
     font-weight: 600;
 		height: 60px;
+   
 	  background-color : #FFFFFF;
     font-size: 14px;
+     -webkit-box-shadow: 0px 1px 0px $grey-line;
+     -moz-box-shadow: 0px 1px 0px $grey-line;
+     -o-box-shadow: 0px 1px 0px $grey-line;
  
-   
-     
 		ul {
-   
-    
-     margin: 0 auto;
+         margin: 0px;
+         list-style-type: none;
+         padding: 0;
   
-  
-			li {
+  			li {
 			  display: inline-block;
+        margin-top: 0px;
 				padding: 0 0 0 1.5em;
 
         &:first-child{
@@ -86,10 +84,12 @@
         }
           			
 				a {
+         
 					display: block;
           color: inherit;
 					text-decoration: none;
 					line-height: 57.5px;
+          /*57.5px*/
 						/*padding: 0 0.5em 0 0.5em;*/
            
          &:hover{
@@ -103,11 +103,29 @@
 			}
 		}
 	}
-
+  .nav-wrapper{
+    width:100%;
+    display: inline-block;
+    position: relative;
+  }
+  .keranjang{
+    top:22px;
+    right:-1px;
+    position: absolute;
+    font-size: 0.80rem;
+    text-decoration: none;
+    color: $grey-text;
+  }
+  .icon-keranjang{
+    position: absolute;
+    top:20px; right: 100px;
+  }
+  
    .logo{
-        width : 12%;
+     
+        width : 30%;
         margin-top: 10px;
-        display:inline-block;
+        display: block;
         background: url(../img/kulina-logo.png) no-repeat;
         background-size: contain;
         height: 2.5rem;
@@ -127,11 +145,11 @@
 }
 
 .tengah{
-  display: inline-block;
+  display: block;
   margin: 0 auto;
-  width: 100%;
   padding: 0;
   text-align: center;
+  
 }
 
 
@@ -143,6 +161,176 @@
     min-height: 636px; 
 }
 
+#feature{
+  width:100%;
+  min-height: 120px;
+  background-color:$grey-bg;
+  border-bottom : 1px solid $grey-line;
+}
+.feature-guarantee{
+  @include grid-span(6,7);
+  margin-top: 20px;
+
+  &:before{
+    width:1px;
+    background-color: $grey-line;
+    content: '';
+    position: absolute;
+    height: 50px;
+    margin-top:10px;
+
+  }     
+}
+.feature-free{
+  @include grid-span(6,1);
+  margin-top: 20px;
+}
+
+.feature-free-img{
+    display: inline-block;
+    float: left;
+    width: (100%/8);
+    min-height: 1px;
+    margin-right: 20px;
+
+}
+
+.feature-free-desc{
+   display: inline-block;
+   float: left;
+   width:(100%/1.3);
+  min-height: 1px;
+  margin-top:10px;
+            h4{
+              margin: 0;
+
+            }
+            p{
+              margin-top: 5px;
+              font-size: .80em;
+              color: $grey-text;
+            }
+   
+}
+.feature-guarantee-img{
+    display: inline-block;
+    float: left;
+    width: (100%/8);
+    min-height: 1px;
+    margin-right: 20px;
+    margin-left: 20px;
+
+}
+.feature-guarantee-desc{
+   display: inline-block;
+   float: left;
+   width:(100%/1.3);
+  min-height: 1px;
+  margin-top:10px;
+            h4{
+              margin: 0;
+
+            }
+            p{
+              margin-top: 5px;
+              font-size: .80em;
+              color: $grey-text;
+            }
+   
+}
+
+#what-kulina{
+  width: 100%;
+  background-color: white;
+  min-height: 511px;
+  border-bottom : 1px solid $grey-line;
+  
+}
+.what-kulina-left{
+  @include grid-span(5,2);
+}
+.what-kulina-content{
+
+  
+      p{
+        font-size: 0.85rem;
+        margin-bottom:15px;
+        line-height: 20px;
+        color: $grey-text;
+      }
+      li{
+        margin-left: 10px;
+        list-style-type: none;
+        font-size: .90rem;
+              color: $grey-text;
+              line-height: 2rem;
+        background: url(../img/ic-check.png) 0 50% no-repeat;
+         list-style-type: none;
+         padding-left: 30px;
+        
+         
+
+      }
+ 
+}
+.what-kulina-right{
+  @include grid-span(6,7);
+  background: url(../img/group-7.png) no-repeat center;
+  background-size: cover;
+  height: 510px;
+}
+
+#kulina-menu{
+  height: 835px;
+  background-color: $primarybgColor;
+  
+
+}
+.kulina-menu-wrapper{
+  padding: 5px;
+ margin-top: 30px;
+ position: relative;
+
+  h2{
+    margin-top:0;
+    text-transform: uppercase;
+   
+  }
+}
+.kulina-content{
+  @include grid-span(12,1);
+}
+.kulinacard{
+  p{
+    font-size: 0.9rem;
+    color: $primaryfgColor;
+    margin-top: 15px;
+    font-weight: 600;
+    margin-bottom:5px;
+  }
+  h4{
+    margin-top: 0;
+    font-weight: 600;
+  }
+}
+
+#subscribe{
+  width: 100%;
+  background-color: rgb(103, 103, 103);
+ height:160px;
+}
+.subscribe-content{
+  @include grid-span(12.1);
+  text-align: center;
+  color: white;
+  margin-top: 1.5rem; 
+   h4{
+     margin-bottom: 5px;
+   }
+}
+
+
+
 #kulinabox{
   width: 100%;
   min-height: 300px;
@@ -152,35 +340,208 @@
   background: url('../img/group-6.png') no-repeat;
   @include grid-span(6,1);
   background-size: cover;
-  height: 300px;
+  min-height: 300px;
 }
 
 .kulinabox-right{
   @include grid-span(6,7);
-  background-color: $primaryfgColor;
+  background-color: $primarybtnColor;
   color:$primarybgColor;
-  height: 300px;
+  min-height: 300px;
+  
+  
+
+}
+.kulina-box-right-content{
+  margin-top: 5rem;
+  text-align: center;
+  font-size: 1.3rem;
+  display: block;
+  line-height: 1rem;
+}
+
+#kulina-advantages{
+  width: 100%;
+  min-height: 420px;
+  background-color: $grey-bg;
+  text-align: center;
+ 
+ .kulina-advantages-wrap{
+   margin: 20px 10px 10px 20px;
+   padding-left: 40px;
+   padding-right: 40px;
+          p{
+            font-size: .85em;
+            margin: 0px;
+            color: $grey-text;
+
+          }
+          h4{
+            margin: 10px;
+          }
+
+
+ } 
+
+}
+.kulina-advantages-left{
+  @include grid-span(4,1);
+
 
 }
 
-.btn{
+.kulina-advantages-center{
+    @include grid-span(4,5);
+     
+}
+
+.kulina-advantages-right{
+    @include grid-span(4,9);
+   
+}
+
+#kulina-testimoni{
   width: 100%;
+  min-height: 395px;
+  background-color: $primarybgColor;
+   border-bottom : 1px solid $grey-line;
+}
+.kulina-testimoni-wrapper{
+    margin: 20px 0px 0px 20px;
+    padding-top: 60px;
+   
+   text-align: center;
+            h4{
+              font-size: .85rem;
+            }
+            p{
+              color: $grey-text;
+              line-height: 1.5rem;
+              font-size: 1.1rem;
+              padding-right: 15px;
+              padding-left: 15px;
+            }
+  
+}
+.kulina-testimoni-left{
+  @include grid-span(4,1);  
+}
+.kulina-testimoni-center{
+  @include grid-span(4,5);
+}
+.kulina-testimoni-right{
+  @include grid-span(4,9);
+
+}
+#kulina-address{
+  padding-top: 50px;
+  width:100%;
+  background-color: $primarybgColor;
+  min-height: 220px;
+}
+.kulina-address-wrapper{
+  height: 220px;
+  border-bottom: 1px solid $grey-line;
+
+  address{
+    margin:0;
+    font-size: 0.8rem;
+    color: $grey-text;
+    line-height: 1.5rem;
+    font-style: normal;
+  }
+  
+  h4{
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+      ul{
+        list-style-type: none;
+        line-height: 1.5rem;
+        padding: 0;
+        margin:0;
+        li{
+          margin: 0;
+          font-size: 0.8rem;
+          color: $grey-text;
+        }
+      }
+}
+.kulina-kantor{
+  @include grid-span(3,1);
+}
+.kulina-about{
+  @include grid-span(2,4);
+}
+.kulina-career{
+  @include grid-span(2,6);
+}
+.kulina-bank{
+  @include grid-span(5,8);
+}
+#kulina-footer{
+  width: 100%;
+  background-color: $primarybgColor;
+  height: 90px;
+}
+.footer-wrapper{
+  padding-top: 30px;
+   span{
+     font-size:0.8rem;
+     color: $grey-text;
+   }
+   a{
+     color: $grey-icon;
+     font-size:1.60rem;
+     padding-left: 10px;
+   }
+}
+.footer-left{
+  @include grid-span(6, 1);
+}
+.footer-right{
+@include grid-span(6,7);
+}
+
+
+.btn{
+  
   text-align: center;
   padding: 3px;
   border: none;
   text-decoration: none;
-  padding: 15px;
-  margin : 5px 0 12px 0;
+  
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
  
 }
  .btn-primary{
+    width: 100%;
     color: $primarybgColor;
     background-color: $primarybtnColor;
+    padding: 15px;
+  margin : 5px 0 12px 0;
   }
   .btn-secondary{
+    padding: 3px;
+    font-weight: bold;
+    font-size:.85rem;
+    width: 15rem;
+    height: 3rem;
+     margin-top: 15px;
     color: $primarybtnColor;
     background-color: $primarybgColor;
+  }
+  .btn-subscribe{
+    margin-top: 15px;
+    width: 7rem;
+    padding: 3px;
+    color: $primarybgColor;
+    background-color: $primarybtnColor;
+    height: 2.2rem;
   }

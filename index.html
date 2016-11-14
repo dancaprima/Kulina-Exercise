@@ -5,10 +5,80 @@
     <title></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link href="public/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="public/css/owl.theme.default.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <script src="public/js/owl.carousel.min.js"></script>
 
+    <script src="https://use.fontawesome.com/709104a43b.js"></script>
+    <script>
+$(document).ready(function(){
+owl=$('.first-owl-carousel');
+owl.owlCarousel({
+    loop:true,
+    margin:10,
+    dots:false,
+   
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+});
+
+$(".prev").click(function () {
+    owl.trigger('prev.owl.carousel');
+});
+
+$(".next").click(function () {
+    owl.trigger('next.owl.carousel');
+});
+
+
+owl2= $('.second-owl-carousel');
+owl2.owlCarousel({
+    loop:true,
+    margin:10,
+    dots:false,
+   
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+});
+$(".prevv").click(function () {
+    owl2.trigger('prev.owl.carousel');
+});
+
+$(".nextt").click(function () {
+    owl2.trigger('next.owl.carousel');
+});
+});
+
+
+
+
+
+
+
+    
+    </script>
 </head>
 
 <body>
@@ -16,28 +86,37 @@
         <div id="subheader">
             <div class="container">
                 <div class="left-subheader">
-                   Sementara hanya melayani area Jakarta Pusat, Jakarta Selatan , dan Jakarta Barat
+                    Sementara hanya melayani area Jakarta Pusat, Jakarta Selatan , dan Jakarta Barat
                 </div>
-             
+
                 <ul class="right">
                     <li><a href="#">Dapur Mitra</a></li>
                     <li><a href="#">Cara Pesan</a></li>
-                    <li><a class="active" href="#">Makanan GRATIS</a></li>
+                    <li class="free"><a href="#">Makanan GRATIS</a></li>
+                    <span class="line-break"></span>
                     <li><a href="#">Masuk/Daftar</a></li>
                 </ul>
             </div>
         </div>
         <div id="navbar">
             <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo-wrapper">
                 <a href="#" class="logo"></a>
-
+                </div>
+               
                 <ul class="tengah">
                     <li><a class="active" href="#">LANGGANAN KULINA BOX</a></li>
                     <li><a href="#">PAKET KATERING</a></li>
                     <li><a href="#">MENU HARIAN </a></li>
                 </ul>
-
-
+               
+               
+          <img class="icon-keranjang" src="public/img/keranjang.png" alt="">  <a class="keranjang" href="">     Keranjang Saya</a>
+                 
+            
+              
+                </div>
             </div>
         </div>
     </header>
@@ -54,32 +133,33 @@
                                     profesional.
                                     <p>
                             </div>
-                            
-                                <div class="styled-select">
-                                    <label for="">Langganan berapa box per hari?</label>
-                                    <select name="cars">
-                                     <option value="volvo">Volvo</option>
-                                     <option value="saab">Saab</option>
-                                     <option value="fiat">Fiat</option>
-                                     <option value="audi">Audi</option>
+
+                            <div class="styled-select">
+                                <label for="">Langganan berapa box per hari?</label>
+                                <select name="Box">
+                                     <option value="1 Box">1 Box</option>
+                                     <option value="2 Box">2 Box</option>
+                                     <option value="3-4 Box">3-4 Box</option>
+                                     <option selected value="5 Box atau lebih">5 Box atau lebih</option>
                                  </select>
-                                </div>
-                                <div class="styled-select">
-                                    <label for="">Langganan berapa hari?</label>
-                                    <select name="cars">
-                                     <option value="volvo">Volvo</option>
-                                     <option value="saab">Saab</option>
-                                     <option value="fiat">Fiat</option>
-                                     <option value="audi">Audi</option>
+                            </div>
+                            <div class="styled-select">
+                                <label for="">Langganan berapa hari?</label>
+                                <select name="hari">
+                                     <option value="1 hari">1 Hari</option>
+                                     <option value="1 minggu">1 Minggu</option>
+                                     <option selected value="10 hari">10 Hari </option>
+                                     <option value="1 bulan">1 Bulan</option>
                                 </select>
-                                </div>
-                        <div class="form-desc">
-                            <h2>Rp19,000<small>/box</small></h2>
-                            <p >Harga Reguler <span style="text-decoration:line-through">Rp,30000</span><p>
-                         </div>
-                                
-                                <p class="highlight-red">Termasuk biaya kirim!</p>
-                                <button class="btn btn-primary" type="submit">Pesan Sekarang</button>
+                            </div>
+                            <div class="form-desc">
+                                <h2>Rp19,000<small>/box</small></h2>
+                                <p>Harga Reguler <span style="text-decoration:line-through">Rp,30000</span>
+                                    <p>
+                            </div>
+
+                            <p class="highlight-red">Termasuk biaya kirim!</p>
+                            <button class="btn btn-primary" type="submit">Pesan Sekarang</button>
 
                         </div>
 
@@ -91,22 +171,334 @@
 
         </div>
 
-        <div id="kulinabox">
-            <div class="kulinabox-left">
+        <div id="feature">
+            <div class="container">
+                <div class="feature-free">
+                    <div class="row">
+                        <div class="feature-free-img">
+                            <img src="public/img/rectangle-1440-copy-2.png" alt="">
+                        </div>
+                        <div class="feature-free-desc">
+                            <h4>Pengiriman GRATIS</h4>
+                            <p>Semua harga tercantum sudah termasuk biaya pengiriman, makanan dikirim sebelum jam makan siang
+                                pada hari kerja (Senin-Jumat).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-guarantee">
+                    <div class="feature-guarantee-img">
+                        <img src="public/img/ic-guarantee.png" alt="">
+                    </div>
+                    <div class="feature-guarantee-desc">
+                        <h4>Garansi Kualitas</h4>
+                        <p>Berhenti langganan sewaktu-waktu dengan pengembalian penuh jika Anda tidak puas dengan makanan kami.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="what-kulina">
+            <div class="what-kulina-left">
+                <div class="row">
+                    <div class="what-kulina-content">
+                        <div class="title">
+                            <h2>Apa itu Kulina Box?</h2>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et dolor sit amet lectus pharetra
+                            aliquam nec eu nisl. Duis varius commodo enim quis efficitur. Quisque erat ipsum, egestas eu
+                            magna vel, pulvinar sollicitudin mauris. Sed sagittis lectus id rhoncus interdum. Suspendisse
+                            dictum scelerisque neque, vitae cursus nulla facilisis at.</p>
+                        <h4>Apa saja yang ada di Kulina Box?</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et dolor sit amet lectus pharetra
+                            aliquam nec eu nisl.</p>
+                        <li>1 Porsi Nasi Putih</li>
+                        <li>1 Porsi Lauk Utama</li>
+                        <li>1 Porsi Lauk Pendamping</li>
+                        <li>1 Porsi Sayur</li>
+                    </div>
+                </div>
+            </div>
+            <div class="what-kulina-right">
 
             </div>
-            <div class="kulinabox-right">
+        </div>
+        <div id="kulina-menu">
 
+            <div class="row">
+                <div class="head-wrapper">
+                    <div class="title-center center">
+                        <h2>Menu Untuk 2 Minggu</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="kulina-menu-wrapper">
+                    <h2>Area Jakarta Barat</h2>
+                    <div class="owl-carousel first-owl-carousel">
+                        <div class="item">
+                            <div class="kulinacard">
+                                <img src="https://assetcdn.kulina.id/production/img/tenggiri-rica-rica-dan-tumis-buncis-jagung-wortel_thumb.JPG" alt="">
+                                <p>Senin, 18 Jul 2016</p>
+                                <h4>Nasi Ayam, Perkedel, Cha-Kangkung</h4>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="kulinacard">
+                                <img src="https://assetcdn.kulina.id/production/img/tenggiri-rica-rica-dan-tumis-buncis-jagung-wortel_thumb.JPG" alt="">
+                                <p>Senin, 18 Jul 2016</p>
+                                <h4>Nasi Ayam, Perkedel, Cha-Kangkung</h4>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="kulinacard">
+                                <img src="https://assetcdn.kulina.id/production/img/tenggiri-rica-rica-dan-tumis-buncis-jagung-wortel_thumb.JPG" alt="">
+                                <p>Senin, 18 Jul 2016</p>
+                                <h4>Nasi Ayam, Perkedel, Cha-Kangkung</h4>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="kulinacard">
+                                <img src="https://assetcdn.kulina.id/production/img/tenggiri-rica-rica-dan-tumis-buncis-jagung-wortel_thumb.JPG" alt="">
+                                <p>Senin, 18 Jul 2016</p>
+                                <h4>Nasi Ayam, Perkedel, Cha-Kangkung</h4>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="customNavigation">
+                        <div class="custom-left">
+                            <a class="prev">
+                                <span class="fa fa-chevron-circle-left" aria-hidden="true"></span></a>
+                        </div>
+                        <div class="custom-right">
+                            <a class="next"><span class="fa fa-chevron-circle-right" aria-hidden="true"></span></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="kulina-menu-wrapper">
+                    <h2>Area Jakarta Pusat, Selatan, dan Timur</h2>
+                    <div class="owl-carousel second-owl-carousel">
+                        <div class="item">
+                            <div class="kulinacard">
+                                <img src="https://assetcdn.kulina.id/production/img/tenggiri-rica-rica-dan-tumis-buncis-jagung-wortel_thumb.JPG" alt="">
+                                <p>Senin, 18 Jul 2016</p>
+                                <h4>Nasi Ayam, Perkedel, Cha-Kangkung</h4>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="kulinacard">
+                                <img src="https://assetcdn.kulina.id/production/img/tenggiri-rica-rica-dan-tumis-buncis-jagung-wortel_thumb.JPG" alt="">
+                                <p>Senin, 18 Jul 2016</p>
+                                <h4>Nasi Ayam, Perkedel, Cha-Kangkung</h4>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="kulinacard">
+                                <img src="https://assetcdn.kulina.id/production/img/tenggiri-rica-rica-dan-tumis-buncis-jagung-wortel_thumb.JPG" alt="">
+                                <p>Senin, 18 Jul 2016</p>
+                                <h4>Nasi Ayam, Perkedel, Cha-Kangkung</h4>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="kulinacard">
+                                <img src="https://assetcdn.kulina.id/production/img/tenggiri-rica-rica-dan-tumis-buncis-jagung-wortel_thumb.JPG" alt="">
+                                <p>Senin, 18 Jul 2016</p>
+                                <h4>Nasi Ayam, Perkedel, Cha-Kangkung</h4>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="customNavigation">
+                        <div class="custom-left">
+                            <a class="prevv">
+                                <span class="fa fa-chevron-circle-left" aria-hidden="true"></span></a>
+                        </div>
+                        <div class="custom-right">
+                            <a class="nextt"><span class="fa fa-chevron-circle-right" aria-hidden="true"></span></a>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
 
 
+        <div id="subscribe">
+            <div class="row">
+                <div class="subscribe-content">
+                    <h4>Daftarkan email anda untuk mendapatkan voucher makan GRATIS Rp,50000</h4>
+                    <input type="text" placeholder="Nama" name="" value="">
+                    <input type="email" placeholder="Email" name="" value="">
+                    <button class="btn btn-subscribe">Kirim</button>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div id="kulina-advantages">
+            <div class="row">
+                <div class="title-center">
+                    <h2>Mengapa langganan kulina box?</h2>
+                </div>
+            </div>
+            <div class="container">
+                <div class="kulina-advantages-wrap">
+                    <div class="kulina-advantages-left">
+                        <img src="public/img/ic-kualitas.png" alt="">
+                        <h4>Kualitas & Variasi Terjamin</h4>
+                        <p>Makanan anda dimasak oleh dapur katering profesional dengan variasi menu berbeda setiap harinya dalam
+                            pengawasan kualitas Kulina.
+                        </p>
+                    </div>
+                    <div class="kulina-advantages-center">
+                        <img src="public/img/ic-harga.png" alt="">
+                        <h4>Harga Terjamin</h4>
+                        <p>Harga lebih murah dibandingkan makanan yang biasa anda beli di tempat makan dengan kualitas yang
+                            lebih baik .Pesan banyak lebih murah.
+                        </p>
+                    </div>
+
+                    <div class="kulina-advantages-right">
+                        <img src="public/img/ic-fleksibel.png" alt="">
+                        <h4>Fleksibel</h4>
+                        <p>Anda bisa berhenti berlangganan sementara atau melewati jadwal pesanan sewaktu-waktu tanpa kehilangan
+                            masa berlangganan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
+        <div id="kulinabox">
+
+            <div class="kulinabox-left">
+
+            </div>
+
+            <div class="kulinabox-right">
+
+                <div class="kulina-box-right-content">
+                    <span class="header-text">Penasaran Dengan Kulina Box?</span>
+                    <h3>COBA GRATIS</h3>
+
+                    <button class="btn btn-secondary">SAYA INGIN SAMPLE GRATIS</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="kulina-testimoni">
+            <div class="container">
+                <div class="kulina-testimoni-wrapper">
+
+                    <div class="kulina-testimoni-left">
+                        <img src="https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/12424914_592280324260783_731514451_n.jpg?ig_cache_key=MTIxMTYwNDkwODM2NjMzNDU5Mg%3D%3D.2.l"
+                            alt="" class="avatar">
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ipsum quos voluptatem corrupti
+                            autem, rerum error aperiam unde perferendis quam?"</p>
+                        <h4>- Dyah Ayu Yaya, Jakarta Selatan</h4>
+                    </div>
+                    <div class="kulina-testimoni-center">
+                        <img src="https://lh3.googleusercontent.com/-DX9XoM22uhM/VRN_1AOQ_aI/AAAAAAAAA8A/ZZZnGJVn2Pk/w506-h750/IMG_0642.jpg" alt=""
+                            class="avatar">
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ipsum quos voluptatem corrupti
+                            autem, rerum error aperiam unde perferendis quam?"</p>
+                        <h4>- Pranowo Putro, Jakarta Selatan</h4>
+                    </div>
+                    <div class="kulina-testimoni-right">
+                        <img src="https://lh4.googleusercontent.com/-vMkufWczw5k/AAAAAAAAAAI/AAAAAAAAADc/oBlXvtEDRc0/photo.jpg" alt="" class="avatar">
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ipsum quos voluptatem corrupti
+                            autem, rerum error aperiam unde perferendis quam?"</p>
+                        <h4>- Muflih Kholidin, Jakarta Pusat</h4>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div id="kulina-address">
+            <div class="container">
+                <div class="kulina-address-wrapper">
+                    <div class="row">
+                        <div class="kulina-kantor">
+                            <h4>Kulina Office</h4>
+                            <address>
+                                Bits Coworking Space, Midtown lt3<br> Jl.Tulodong Atas No.28 Senayan,<br> Kby. Baru, Jakarta
+                                Selatan <br> DKI Jakarta
+
+                            </address>
+                        </div>
+                        <div class="kulina-about">
+                            <h4>Tentang Kulina</h4>
+                            <ul>
+                                <li>Kebijakan Privasi</li>
+                                <li>Syarat & Ketentuan</li>
+                                <li>FAQ</li>
+                                <li>Blog</li>
+                            </ul>
+                        </div>
+                        <div class="kulina-career">
+                            <h4>Bergabung</h4>
+                            <ul>
+                                <li>Daftar jadi Dapur mitra</li>
+                                <li>Referensikan Chef Favoritmu</li>
+                                <li>Karir di Kulina</li>
+                            </ul>
+                        </div>
+                        <div class="kulina-bank">
+                            <h4>Metode Pembayaran</h4>
+                            <img src="public/img/ic-visa.png" alt="">
+                            <img src="public/img/ic-mc.png" alt="">
+                            <img src="public/img/ic-jcb.png" alt="">
+                            <img src="public/img/ic-mdr.png" alt="">
+                            <img src="public/img/ic-bca.png" alt="">
+                            <img src="public/img/ic-bni.png" alt="">
+                            <img src="public/img/ic-pmt.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="kulina-footer">
+            <div class="container">
+
+                <div class="footer-wrapper">
+                    <div class="row">
+                        <div class="footer-left">
+                            <span>Made With <i class="fa fa-heart red" aria-hidden="true"></i> from Indonesia.&copy 2016 Kulina-All right reserved. </span>
+                        </div>
+                        <div class="footer-right">
+                            <div class="right">
+                                <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                                <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                                <a href=""><i class="fa fa-google-plus-square" aria-hidden="true"> </i></a>
+                                <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                <a href=""><i class="fa fa-pinterest-square" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     </div>
-    </div>
-    </div>
+
 
 
 </body>
